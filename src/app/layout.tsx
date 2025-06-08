@@ -18,6 +18,15 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   title: "6XE",
   description: "6XE Official Site",
+  icons: {
+    icon: [
+      { url: '/6xe.jpg' }
+    ],
+    shortcut: '/6xe.jpg',
+    apple: [
+      { url: '/6xe.jpg' }
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -27,6 +36,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${rubikGlitch.variable} ${orbitron.variable}`}>
+      <head>
+        <link rel="shortcut icon" href="/6xe.jpg" type="image/jpeg" />
+        <link rel="icon" href="/6xe.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/6xe.jpg" />
+      </head>
       <body className="bg-black text-white">
         {children}
       </body>
